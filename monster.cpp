@@ -153,8 +153,8 @@ std::array<std::array<monster, 3>, 3> createMonsterGrid() {
 
     return { {
             // 기존 능력치는 그대로 두고 6번째 인자로 각각 어울리는 그림을 매칭했습니다.
-            { monster("위버", 1000, 10, 30, 0, s_weaver), monster("슬라임", 700, 80, 20, 2, s_slime_king), monster("어비스", 600, 70, 40, 1, s_abyss) },
+            { monster("위버", 1000, 10, 30, 0, s_weaver), monster("슬라임", 700, 80, 20, 2, s_slime_king), monster("어비스", 600, 70, 10, 1, s_abyss) },
             { monster("네크로맨서", 450, 50, 5, 0, s_necromancer), monster("베헤모스", 1200, 40, 20, 0, s_behemoth), monster("그리폰", 350, 45, 10, 1, s_griffon) },
-            { monster("센티넬", 2000, 35, 60, 0, s_sentinel), monster("네티", 300, 55, 99, 2, s_nether_ghost), monster("타이거", 5000, 150, 80, 1, s_traveler) }
+            { monster("센티넬", 2000, 35, 6, 0, s_sentinel), monster("네티", 300, 55, 9, 2, s_nether_ghost), monster("타이거", 5000, 150, 8, 1, s_traveler) }
         } };
 }
