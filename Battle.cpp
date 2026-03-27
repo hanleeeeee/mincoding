@@ -54,6 +54,7 @@ void Battle::start(Unit& hero, Unit* monsters[3][3], int stageCount) {
                         deadCount++;
                         ui.start_down(monsters[k][i]->getName());
                         ui.pickup();
+                        std::this_thread::sleep_for(std::chrono::milliseconds(3000)); // 2초 대기
 
                         policy combatdrop;
                         auto loot = combatdrop.drop(hero, *monsters[k][i]);
@@ -101,16 +102,17 @@ void Battle::start_people(Unit& hero, Unit&enemy) {
         ui.start_round(round);
 
         proceedTurn(hero, enemy);
-
+        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 2초 대기
         if (enemy.getHp() <= 0) {
             ui.start_down("살인자");
             return;
         }
 
         proceedTurn(enemy, hero);
-
+        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 2초 대기
         if (hero.getHp() <= 0) {
             ui.start_down(hero.getName());
+
             return;
         }
             
