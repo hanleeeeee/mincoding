@@ -1,0 +1,24 @@
+﻿  Battle.cpp
+C:\Users\906_09\source\repos\Project1\Project1\UI.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'Battle.cpp'을(를) 컴파일하는 중)
+  
+  main.cpp
+C:\Users\906_09\source\repos\Project1\Project1\quest.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\906_09\source\repos\Project1\Project1\main.cpp(19,83): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\906_09\source\repos\Project1\Project1\main.cpp(19,64): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\906_09\source\repos\Project1\Project1\main.cpp(19,46): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  monster.cpp
+  quest.cpp
+C:\Users\906_09\source\repos\Project1\Project1\quest.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'quest.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\906_09\source\repos\Project1\Project1\UI.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'quest.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\906_09\source\repos\Project1\Project1\quest.cpp(32,87): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\906_09\source\repos\Project1\Project1\quest.cpp(32,67): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\906_09\source\repos\Project1\Project1\quest.cpp(32,48): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  Project1.vcxproj -> C:\Users\906_09\source\repos\Project1\x64\Debug\Project1.exe
