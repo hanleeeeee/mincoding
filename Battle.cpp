@@ -46,7 +46,7 @@ void Battle::start(Unit& hero, Unit* monsters[3][3], int stageCount) {
             for (int i = 0; i < 3; i++) {
                 if (monsters[k][i] != nullptr && monsters[k][i]->getHp() > 0) {
                     proceedTurn(hero, *monsters[k][i]);
-                    std::this_thread::sleep_for(std::chrono::seconds(1)); // 2초 대기
+                    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // 2초 대기
                     monster* m = static_cast<monster*>(monsters[k][i]);
                     m->printShape();
              
@@ -74,7 +74,7 @@ void Battle::start(Unit& hero, Unit* monsters[3][3], int stageCount) {
             for (int i = 0; i < 3; i++) {
                 if (monsters[k][i] != nullptr && monsters[k][i]->getHp() > 0 && hero.getHp() > 0) {
                     proceedTurn(*monsters[k][i], hero);
-                    std::this_thread::sleep_for(std::chrono::seconds(1)); // 2초 대기
+                    std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 2초 대기
                     if (hero.getHp() <= 0) {
                         ui.start_down(hero.getName());
                         return;
