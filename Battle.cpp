@@ -1,8 +1,10 @@
-﻿#include "Battle.h"
+#include "Battle.h"
 #include "policy.h"
 #include "UI.h"
 #include "shop.h"
 #include "monster.h"
+#include <thread> // sleep_for를 쓰기 위함
+#include <chrono> // seconds 단위를 쓰기 위함
 job_sel u8;
 game ui;
 shop sh;
@@ -44,6 +46,7 @@ void Battle::start(Unit& hero, Unit* monsters[3][3], int stageCount) {
             for (int i = 0; i < 3; i++) {
                 if (monsters[k][i] != nullptr && monsters[k][i]->getHp() > 0) {
                     proceedTurn(hero, *monsters[k][i]);
+                    std::this_thread::sleep_for(std::chrono::seconds(1)); // 2초 대기
                     monster* m = static_cast<monster*>(monsters[k][i]);
                     m->printShape();
              
@@ -71,7 +74,7 @@ void Battle::start(Unit& hero, Unit* monsters[3][3], int stageCount) {
             for (int i = 0; i < 3; i++) {
                 if (monsters[k][i] != nullptr && monsters[k][i]->getHp() > 0 && hero.getHp() > 0) {
                     proceedTurn(*monsters[k][i], hero);
-
+                    std::this_thread::sleep_for(std::chrono::seconds(1)); // 2초 대기
                     if (hero.getHp() <= 0) {
                         ui.start_down(hero.getName());
                         return;
@@ -80,6 +83,7 @@ void Battle::start(Unit& hero, Unit* monsters[3][3], int stageCount) {
             }
 
             ui.current_state(hero.getHp(), hero.getWeapon(), hero.getdefense(), hero.getCompatibility());
+            
             round++;
             std::cout << "--------------------------\n";
         }
